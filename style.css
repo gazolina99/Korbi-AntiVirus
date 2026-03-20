@@ -1,0 +1,165 @@
+:root {
+  --bg: #070b16;
+  --panel: #101a31;
+  --line: #1d315d;
+  --text: #ecf2ff;
+  --muted: #9eb0da;
+  --accent: #74ff9d;
+  --accent2: #47c3ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background-color: #000;
+  color: var(--text);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(circle at top, rgba(21, 41, 81, 0.55), rgba(7, 11, 22, 0.9)),
+    url("./assets/korbi-main-logo.png") center 42% / min(85vw, 920px) no-repeat,
+    #000;
+  opacity: 0.26;
+  pointer-events: none;
+}
+
+.hero {
+  padding: 24px clamp(24px, 4vw, 80px) 60px;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.brand-logo {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(116, 255, 157, 0.35));
+}
+
+.nav-btn,
+.cta {
+  text-decoration: none;
+  font-weight: 600;
+  color: #08111d;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  padding: 10px 16px;
+  border-radius: 10px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  margin: 0 0 14px;
+}
+
+.hero-content p {
+  max-width: 780px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+main {
+  padding: 20px clamp(24px, 4vw, 80px) 60px;
+}
+
+.panel {
+  background: linear-gradient(180deg, rgba(16, 26, 49, 0.9), rgba(12, 20, 39, 0.9));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.grid article {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  background: rgba(14, 25, 51, 0.75);
+}
+
+.grid article h3 {
+  margin-top: 0;
+  color: #cde0ff;
+}
+
+.grid article p,
+.sub {
+  color: var(--muted);
+}
+
+.tips ul {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.9;
+}
+
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.download-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(9, 16, 34, 0.85);
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.download-card:hover {
+  transform: translateY(-2px);
+  border-color: #5ec3ff;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.footer-logo {
+  width: min(160px, 45vw);
+  image-rendering: pixelated;
+}

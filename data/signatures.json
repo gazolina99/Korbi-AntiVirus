@@ -1,0 +1,36 @@
+{
+  "sha256": [
+    "44d88612fea8a8f36de82e1278abb02f3f7f6fcbf5f7d7f4f1f0f8e9f7d5e8b1",
+    "275a021bbfb6489e54d471899f7db9d6f9d991f8f7fcb4d6f5fe9a6f8f0c2f1a"
+  ],
+  "suspicious_names": [
+    "svchost32.exe",
+    "winupdter.exe",
+    "chrome_update_service.exe",
+    "system_security_fix.exe",
+    "password_dump.py",
+    "crypto_miner.exe",
+    "injector.dll"
+  ],
+  "suspicious_extensions": [
+    ".scr",
+    ".pif",
+    ".hta",
+    ".vbs",
+    ".js",
+    ".jse",
+    ".cmd",
+    ".bat",
+    ".ps1"
+  ],
+  "dangerous_keywords": [
+    "powershell -enc",
+    "invoke-expression",
+    "downloadstring",
+    "frombase64string",
+    "reg add hkcu\\\\software\\\\microsoft\\\\windows\\\\currentversion\\\\run",
+    "chmod +x",
+    "curl http",
+    "wget http"
+  ]
+}
